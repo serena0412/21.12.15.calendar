@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>오늘의 결석 사유</title>
+	<meta name='description' content='다양한 방법으로 결석을 즐겨볼 수 있는 웹사이트입니다.'>
+	<meta property='og:type' content='website'>
+	<meta property='og:url' content='https://serena0412.github.io/21.12.15.calendar/'>
+	<meta property='og:image' content='header.jpg'>
+	<meta property='og:title' content='학교 가기 싫은 날'>
+	<meta property='og:description' content='다양한 방법으로 결석을 즐겨볼 수 있는 웹사이트입니다.'>
+
+
+
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+		body{margin: 0px;overflow-x: hidden; font-family: 'Black Han Sans', sans-serif; background: url('background.png'); background-color: #1c1d1d;background-size: 100%; overflow-y: hidden;}
+		header{height: 120px; background-color: #e61f19;border-bottom:solid 5px #000000; text-align: center; position:relative}
+		div{position:relative; height: 600px; width: 1400px;}
+		.flex{display:flex;}
+		.item{position:absolute;height: auto;}
+		section{width: 1400px; margin: auto; text-align: center;}
+		h1{color: white; position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 40px; margin: auto; font-weight:normal; font-size: 2.5em;}
+		h2{position: absolute; font-size: 3em; top: 280px; left: 0; right: 0; font-weight:normal;}
+
+
+
+			body,html{cursor:url(cursor1.png),auto  !important}
+		a:hover {cursor:url(cursor2.png),auto  !important}
+		.cur{cursor:url(cursor2.png),auto  !important}
+	</style>
+
+</head>
+<body>
+<header>
+<h1>오늘의 결석 사유를 추천받아보세요!</h1>
+</header>
+
+
+<section>
+	<div class="flex">
+			<h2 class="input" id='text'>펜을 눌러보세요!</h2>
+			<img src='1.png' style=" margin: auto; width: 55%; left: 0px; top:60px;">
+
+			<img src='2.png' class="item button cur" style=" width: 17%; right:230px; bottom:80px;">
+			
+			<a href="https://serena0412.github.io/21.12.15.main/" target_self>
+			<img src='back.png' class="item" style=" width: 15%; left: 0px;bottom:40px;z-index: 0;">
+			</a>
+	</div>
+
+</section>
+
+
+
+
+
+<script type="text/javascript">
+	
+var txtArray = ['아플 거라서', '미용실 갈 거라서', '낚시 갈 거라서', '늦잠 잘 거라서', '기분이 안 좋을 거라서', '피곤할 거라서', 
+		 '꿈꿀 거라서', '캠핑 갈 거라서', '콘서트 갈 거라서', '여행 갈 거라서', '하늘을 날 거라서', '비가 올 거라서', 
+		 '우주를 정복할 거라서','돈이 없을 거라서', '쉬기를 원할 거라서', '평화를 원할 거라서', '이벤트에 당첨될 거라서', 
+		 '그냥 가기 싫을 거라서', '기쁠 거라서', '싸울 거라서', '아는 외계인을 만날 거라서', '집에 바선생이 나올 거라서', '망망이가 너무 귀여울 거라서',
+		 '길냥이랑 밥 먹을 거라서', '종강할 거라서', '내가 만든 국경일이라서'];
+
+
+
+
+var input = document.querySelector(".input");
+var btn = document.querySelector(".button");
+
+
+
+btn.addEventListener("click", action);
+
+function action(){
+	var element = document.getElementById('text');
+	element.style.top = '220px';
+
+	var ranNum = Math.floor(Math.random()*txtArray.length);
+  input.innerHTML = '오늘은<br>' + txtArray[ranNum] + '<br>학교에 안 갈 거예요';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
